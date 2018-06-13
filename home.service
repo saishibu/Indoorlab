@@ -1,0 +1,11 @@
+[Unit]
+Description=Datacollection service for home nodes
+After=network.target
+[Service]
+Type=simple
+User=root
+ExecStart=/home/pi/Indoorlab/data_home.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
